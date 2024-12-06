@@ -47,5 +47,16 @@ create table course(
 	人數 char(10),
 )
 	
+Create table account
+(Class Char(10),
+ Name varchar(10),
+ Account int,
+ Password char(10))
+ --drop table account
+Insert into account(Class,Name,Account,Password)
+Values('22143A','王小明',' 8566','dddd'),
+  ('22143A','陳小花',' 3596','aaaa'),
+     ('22143A','野獸先輩',' 114514','bbbb'),
+  ('22143A','張大強','5233','cccc');
 
-
+select*from account
