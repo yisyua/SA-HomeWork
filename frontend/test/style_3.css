@@ -1,0 +1,97 @@
+* {
+    font-family: "Poppins", "sans-serif";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #86c7ea; 
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: 140px;
+}
+
+header h1 {
+    position: relative;
+    left: 6vw;
+    top: 3vw;
+    color: black;
+    font-size: 50px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    width: 420px;
+    height: 500px;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 40px;
+}
+
+.one {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 320px;
+    height: 70px;
+}
+.one label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    font-size: 15px;
+}
+.one input {
+    width: 250px;
+    height: 40px;
+    border: 0;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 15px;
+    margin-left: 10px;
+    border: 2px solid white;
+}
+.one input:focus {
+    border-color: rgb(85, 162, 207);
+    transition: 0.5s;
+    outline: none;
+}
+
+.btn {
+    width: 320px;
+    height: 45px;
+    background: rgb(46, 46, 46);
+    border: 2px solid rgb(46, 46, 46);
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    background: #fff;
+    transition: 0.8s;
+    color: rgb(46, 46, 46);
+    border: none;
+    outline: none;
+}
