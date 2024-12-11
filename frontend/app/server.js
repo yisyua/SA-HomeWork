@@ -7,12 +7,6 @@ import sql from 'mssql';
 
 const app = express();
 
-app.use('/api', controllers);
-
-const server = app.listen(3000, () => {});
-
-viteExpress.bind(app, server);
-
 //連資料庫
 const config = {
     user: 'saim',
