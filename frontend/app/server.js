@@ -1,11 +1,15 @@
 import controllers from '../controllers/index.js';
 import express from 'express';
 import viteExpress from 'vite-express';
-import sql from 'mssql'; 
-//先確認是否有mssql:npm list mssql
-//如(empty)話:npm install mssql 
+import sql from 'mssql'; // 確保已安裝 mssql 模組
 
 const app = express();
+
+app.use('/api', controllers);
+
+const server = app.listen(3000, () => {});
+
+viteExpress.bind(app, server);
 
 //連資料庫
 const config = {
@@ -35,4 +39,5 @@ sql.connect(config).then(pool => {
 }).catch(err => {
     console.error('Database connection failed!', err);
 });
-
+//先確認是否有mssql:npm list mssql
+//如(empty)話:npm install mssql 
