@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { courseResult } from "./course";
+import { courseResult } from "../consts/course";
 
 export default function SearchResult() {
   const navigate = useNavigate();
+
+  
   const location = useLocation();
   const {
     semester,
@@ -63,14 +65,30 @@ export default function SearchResult() {
         <div className="flex flex-col items-center w-[1050px] h-[520px] rounded-3xl bg-gray-400 mb-[60px]">
           {/* Title */}
           <div className="flex items-center justify-start w-[960px] h-[50px] bg-[rgb(46,46,46)] text-white rounded-xl mt-6 px-4">
-            <div className="w-[70px] h-[40px] ml-[50px] mr-[40px] flex items-center justify-center">科目代號</div>
-            <div className="w-[70px] h-[40px] ml-[40px] mr-[70px] flex items-center justify-center">課程名稱</div>
-            <div className="w-[70px] h-[40px] mx-[20px] flex items-center justify-center">教師姓名</div>
-            <div className="w-[60px] h-[40px] ml-[-2px] mr-[-25px] flex items-center justify-center">學分數</div>
-            <div className="w-[100px] h-[40px] mx-[25px] flex items-center justify-center">課別</div>
-            <div className="w-[60px] h-[40px] ml-[-5px] mr-[10px] flex items-center justify-center">地點</div>
-            <div className="w-[70px] h-[40px]  ml-[10px] mr-[15px] flex items-center justify-center">星期</div>
-            <div className="w-[60px] h-[40px] ml-[-21px] mr-[0px] flex items-center justify-center">節次</div>
+            <div className="w-[70px] h-[40px] ml-[50px] mr-[40px] flex items-center justify-center">
+              科目代號
+            </div>
+            <div className="w-[70px] h-[40px] ml-[40px] mr-[70px] flex items-center justify-center">
+              課程名稱
+            </div>
+            <div className="w-[70px] h-[40px] mx-[20px] flex items-center justify-center">
+              教師姓名
+            </div>
+            <div className="w-[60px] h-[40px] ml-[-2px] mr-[-25px] flex items-center justify-center">
+              學分數
+            </div>
+            <div className="w-[100px] h-[40px] mx-[25px] flex items-center justify-center">
+              課別
+            </div>
+            <div className="w-[60px] h-[40px] ml-[-5px] mr-[10px] flex items-center justify-center">
+              地點
+            </div>
+            <div className="w-[70px] h-[40px]  ml-[10px] mr-[15px] flex items-center justify-center">
+              星期
+            </div>
+            <div className="w-[60px] h-[40px] ml-[-21px] mr-[0px] flex items-center justify-center">
+              節次
+            </div>
           </div>
 
           <div className="flex flex-col items-center w-[960px] h-[400px] bg-[rgb(46,46,46)] rounded-lg mt-4 overflow-y-auto scrollbar-thin scrollbar-track-gray-600 scrollbar-thumb-gray-600">
@@ -80,14 +98,30 @@ export default function SearchResult() {
                   key={course.course_id}
                   className="flex items-center justify-between w-[890px] text-white my-2 px-4"
                 >
-                  <div className="w-[100px] flex items-center justify-center">{course.course_id}</div>
-                  <div className="w-[200px] flex items-center justify-center">{course.course_name}</div>
-                  <div className="w-[100px] flex items-center justify-center">{course.course_teacher}</div>
-                  <div className="w-[50px] flex items-center justify-center">{course.num}</div>
-                  <div className="w-[100px] flex items-center justify-center">{course.list}</div>
-                  <div className="w-[100px] flex items-center justify-center">{course.classroom}</div>
-                  <div className="w-[50px] flex items-center justify-center">星期{course.day}</div>
-                  <div className="w-[50px] flex items-center justify-center">{course.time}</div>
+                  <div className="w-[100px] flex items-center justify-center">
+                    {course.course_id}
+                  </div>
+                  <div className="w-[200px] flex items-center justify-center">
+                    {course.course_name}
+                  </div>
+                  <div className="w-[100px] flex items-center justify-center">
+                    {course.course_teacher}
+                  </div>
+                  <div className="w-[50px] flex items-center justify-center">
+                    {course.num}
+                  </div>
+                  <div className="w-[100px] flex items-center justify-center">
+                    {course.list}
+                  </div>
+                  <div className="w-[100px] flex items-center justify-center">
+                    {course.classroom}
+                  </div>
+                  <div className="w-[50px] flex items-center justify-center">
+                    星期{course.day}
+                  </div>
+                  <div className="w-[50px] flex items-center justify-center">
+                    {course.time}
+                  </div>
                   <button
                     className="w-[60px] h-[35px] border-2 border-white bg-[rgb(46,46,46)] text-white rounded-full hover:bg-white hover:text-[rgb(46,46,46)] font-semibold transition-all"
                     onClick={() => setIsModalOpen(true)} // 開啟提醒視窗
