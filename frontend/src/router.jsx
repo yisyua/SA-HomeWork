@@ -11,7 +11,12 @@ import SearchResult from "./pages/SearchResult";
 import Delete from "./pages/Delete";
 import DeleteResult from "./pages/DeleteResult";
 import Jojo from "./pages/Jojo";
-import Result from "./pages/Result";
+import Look from "./pages/Look";  
+import LookResult from "./pages/LookResult"; 
+import New from "./pages/New"; 
+import Result from "./pages/Result"; 
+import AdminAccount from "./pages/adminaccount"; 
+
 
 export const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -27,4 +32,11 @@ export const router = createBrowserRouter([
   { path: "/deleteresult", element: <DeleteResult /> },
   { path: "/jojo", element: <Jojo /> },
   { path: "/result", element: <Result /> },
+  { path: "/new", element: < New/> },
+  { path: "/look", element: < Look/> },
+  { path: "/lookresult", element: < LookResult/> },
+  { path: "/adminaccount", element: < AdminAccount/> }
+
+  
 ]);
+
