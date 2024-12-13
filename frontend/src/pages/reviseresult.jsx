@@ -1,164 +1,93 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 
-export default function ReviseResult() {
+const ReviseResult = () => {
+  const location = useLocation();
+  const trackedCourses = location.state?.trackedCourses || [];
 
-  const navigate = useNavigate(); // 用來進行導航
+  // 初始化課表
+  const [schedule, setSchedule] = useState(() => {
+    const emptySchedule = {};
+    for (let day = 1; day <= 7; day++) {
+      emptySchedule[day] = Array(14).fill(null); // 每天14節
+    }
+    return emptySchedule;
+  });
 
-        return (
-          <>
-            <div className="bg-gray-200 min-h-screen">
-              <header className="bg-[rgb(46,46,46)] h-[100px] flex items-center justify-between px-20">
-                <h1 className="text-white text-3xl font-semibold">修改課程</h1>
-                <button className="bg-[rgb(46,46,46)] border-2 border-white text-white font-medium text-sm px-6 py-2 rounded-full hover:bg-white hover:text-gray-800" onClick={() => navigate("/adminhome")}>
-                  回到首頁
-                </button>
-              </header>
-              <main className="flex justify-center items-center py-10">
-                <div className="bg-[rgb(46,46,46)] max-w-[1100px] h-[520px] rounded-lg p-10 flex">
-                  <div className="flex flex-col w-[350px] space-y-6">
-                    <div className="flex items-center space-x-4 ml-[40px]">
-                      <label htmlFor="semester" className="text-white w-14">學期</label>
-                      <input
-                        id="semester"
-                        type="text"
-                        className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                        required
-                      />
-                    </div>
-                    <div className="flex items-center space-x-4 ml-[40px]">
-                      <label htmlFor="program" className="text-white w-14">學制</label>
-                      <input
-                        id="program"
-                        type="text"
-                        className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                        required
-                      />
-                    </div>
-                    <div className="flex items-center space-x-4 ml-[40px]">
-                      <label htmlFor="courseType" className="text-white w-14">課別</label>
-                      <input
-                        id="courseType"
-                        type="text"
-                        className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                        required
-                      />
-                    </div>
-                    <div className="flex items-center space-x-4 ml-[40px]">
-                      <label htmlFor="session" className="text-white w-14">節次</label>
-                      <input
-                        id="session"
-                        type="text"
-                        className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                        required
-                      />
-                    </div>
-                    <div className="flex items-center space-x-4 ml-[40px]">
-                      <label htmlFor="teacher" className="text-white w-14">教師</label>
-                      <input
-                        id="teacher"
-                        type="text"
-                        className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                        required
-                      />
-                    </div>
-                    <div className="flex items-center space-x-4 ml-[40px]">
-                      <label htmlFor="class" className="text-white w-14">班級</label>
-                      <input
-                        id="class"
-                        type="text"
-                        className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                        required
-                      />
-                    </div>
-                    <div className="flex items-center space-x-4 ml-[15px]">
-                      <label htmlFor="classCode" className="text-white w-[80px]">班級代碼</label>
-                      <input
-                        id="classCode"
-                        type="text"
-                        className="w-[240px] h-10 rounded-lg px-4 text-sm"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="ml-10 flex flex-col space-y-6 ml-[100px]">
-                    <div className="flex items-center space-x-4">
-                    <label htmlFor="courseName" className="text-white w-[80px] ml-[30px] mr-[-30px]">
-                          系所
-                        </label>
-                        <input
-                          id="courseName"
-                          type="text"
-                          className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                          required
-                        />
-                    </div>
-                    <div className="flex items-center space-x-4">
-                    <label htmlFor="courseName" className="text-white w-[80px] ml-[30px] mr-[-30px]">
-                          年級
-                        </label>
-                        <input
-                          id="courseName"
-                          type="text"
-                          className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                          required
-                        />
-                    </div>
-                    <div className="flex items-center space-x-4">
-                    <label htmlFor="courseName" className="text-white w-[80px] ml-[30px] mr-[-30px]">
-                          星期
-                        </label>
-                        <input
-                          id="courseName"
-                          type="text"
-                          className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                          required
-                        />
-                    </div>
-                    <div className="space-y-6">
-                      <div className="flex items-center space-x-4">
-                        <label htmlFor="courseName" className="text-white w-[80px] ml-[30px] mr-[-30px]">
-                          課程
-                        </label>
-                        <input
-                          id="courseName"
-                          type="text"
-                          className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                          required
-                        />
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <label htmlFor="courseCode" className="text-white w-[80px]">
-                          科目代碼
-                        </label>
-                        <input
-                          id="courseCode"
-                          type="text"
-                          className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                          required
-                        />
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <label htmlFor="courseCode" className="text-white w-[80px] ml-[15px] mr-[-15px]">
-                          學分數
-                        </label>
-                        <input
-                          id="courseCode"
-                          type="text"
-                          className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                          required
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="ml-10 flex justify-start mt-[200px]">
-                    <button className="border-2 border-white w-[100px] h-[50px] bg-[rgb(46,46,46)] text-white font-medium text-sm px-6 py-2 rounded-full hover:bg-white hover:text-gray-800">
-                      修改
-                    </button>
-                  </div>
-                </div>
-              </main>
-            </div>
-          </>
-        );
+  const parseDay = (day) => parseInt(day.replace("星期", ""), 10);
+  const parseTime = (time) => {
+    // 使用 split 方法將字串以逗號分割，然後轉換為整數陣列
+    return time.split(',').map((t) => parseInt(t, 10));
+};
+
+  // 填充課表（使用 useEffect，保證 trackedCourses 變化時更新課表）
+  React.useEffect(() => {
+    const updatedSchedule = {};
+    for (let day = 1; day <= 7; day++) {
+      updatedSchedule[day] = Array(14).fill(null);
+    }
+
+    trackedCourses.forEach((course) => {
+      const day = parseDay(course.day);
+      const times = parseTime(course.time);
+
+      times.forEach((time) => {
+        const timeIndex = time - 1;
+        if (updatedSchedule[day]) {
+          updatedSchedule[day][timeIndex] = course.course_name;
+        }
+      });
+    });
+
+    setSchedule(updatedSchedule);
+  }, [trackedCourses]); // trackedCourses 改變時觸發
+
+  // 清空課表
+  const handleClean = () => {
+    setSchedule(() => {
+      const resetSchedule = {};
+      for (let day = 1; day <= 7; day++) {
+        resetSchedule[day] = Array(14).fill(null);
       }
+      return resetSchedule;
+    });
+  };
+
+  return (
+    <div className="w-11/12 max-w-6xl mx-auto bg-white rounded-lg shadow-md p-4">
+      <header className="flex justify-between items-center p-4 bg-gray-100 border-b-2 border-gray-200">
+        <h1 className="text-lg font-medium">預排課表</h1>
+        <button
+          className="bg-[rgb(46,46,46)] hover:bg-white hover:text-gray-800 transition-all text-white font-medium text-lg w-20 h-12 mr-[20px] rounded-full"
+          onClick={handleClean}
+        >
+          Clean
+        </button>
+      </header>
+      <table className="w-full border-collapse text-center mt-4">
+        <thead>
+          <tr>
+            <th className="border border-gray-300 p-4 bg-gray-200">節次</th>
+            {Array.from({ length: 7 }, (_, i) => (
+              <th key={i} className="border border-gray-300 p-4 bg-gray-200">{`星期${i + 1}`}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {Array.from({ length: 14 }, (_, index) => (
+            <tr key={index}>
+              <td className="border border-gray-300 p-4 bg-white">{index + 1}</td>
+              {Array.from({ length: 7 }, (_, dayIndex) => (
+                <td key={dayIndex} className="border border-gray-300 p-4 bg-gray-50">
+                  {schedule[dayIndex + 1][index] || ""}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default ReviseResult;

@@ -70,8 +70,8 @@ export default function Jojo() {
                   回到首頁
                 </button>
               </header>
-              <main className="flex justify-center items-center py-10">
-                <div className="bg-[rgb(33,94,135)] max-w-[1100px] h-[520px] rounded-lg p-10 flex">
+              <main className="flex justify-center items-center py-20">
+                <div className="bg-[rgb(33,94,135)] max-w-[1100px] h-[400px] rounded-lg p-10 flex">
                   <div className="flex flex-col w-[350px] space-y-6">
                     <div className="flex items-center space-x-4 ml-[40px]">
                       <label htmlFor="semester" className="text-white w-14">學期</label>
@@ -130,30 +130,6 @@ export default function Jojo() {
                         className="w-[250px] h-10 rounded-lg px-4 text-sm"
                         value={teacher}
                         onChange={(e) => setTeacher(e.target.value)}
-                        required
-                      />
-                    </div>
-                    <div className="flex items-center space-x-4 ml-[40px]">
-                      <label htmlFor="class" className="text-white w-14">班級</label>
-                      <input
-                        id="class"
-                        type="text"
-                        placeholder="輸入班級"
-                        className="w-[250px] h-10 rounded-lg px-4 text-sm"
-                        value={classname}
-                        onChange={(e) => setClassname(e.target.value)}
-                        required
-                      />
-                    </div>
-                    <div className="flex items-center space-x-4 ml-[15px]">
-                      <label htmlFor="classCode" className="text-white w-[80px]">班級代碼</label>
-                      <input
-                        id="classCode"
-                        type="text"
-                        placeholder="輸入班級代碼"
-                        className="w-[240px] h-10 rounded-lg px-4 text-sm"
-                        value={classCode}
-                        onChange={(e) => setClassCode(e.target.value)}
                         required
                       />
                     </div>
@@ -224,13 +200,13 @@ export default function Jojo() {
                         <option value="" disabled>
                           選擇星期
                         </option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="日">日</option>
+                        <option value="星期1">星期1</option>
+                        <option value="星期2">星期2</option>
+                        <option value="星期3">星期3</option>
+                        <option value="星期4">星期4</option>
+                        <option value="星期5">星期5</option>
+                        <option value="星期6">星期6</option>
+                        <option value="星期日">星期日</option>
                       </select>
                     </div>
                     <div className="space-y-6">
@@ -264,7 +240,7 @@ export default function Jojo() {
                       </div>
                     </div>
                   </div>
-                  <div className="ml-10 flex justify-start mt-[200px]">
+                  <div className="ml-10 flex justify-start mt-[150px]">
                     <button className="border-2 border-white w-[100px] h-[50px] bg-[rgb(33,94,135)] text-white font-medium text-sm px-6 py-2 rounded-full hover:bg-white hover:text-gray-800" onClick={handleSubmit}>
                       查詢
                     </button>

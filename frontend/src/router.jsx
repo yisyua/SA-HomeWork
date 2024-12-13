@@ -8,14 +8,18 @@ import Revise from "./pages/Revise";
 import ReviseResult from "./pages/ReviseResult";
 import Search from "./pages/Search";
 import SearchResult from "./pages/SearchResult";
-import Delete from "./pages/Delete";
-import DeleteResult from "./pages/DeleteResult";
+import Delete from "./pages/delete";
+import DeleteResult from "./pages/deleteresult";
 import Jojo from "./pages/Jojo";
 import Look from "./pages/Look";  
 import LookResult from "./pages/LookResult"; 
 import New from "./pages/New"; 
 import Result from "./pages/Result"; 
 import AdminAccount from "./pages/adminaccount"; 
+import Edit from "./pages/edit"; 
+import Account from "./pages/account"; 
+
+
 
 
 export const router = createBrowserRouter([
@@ -35,7 +39,10 @@ export const router = createBrowserRouter([
   { path: "/new", element: < New/> },
   { path: "/look", element: < Look/> },
   { path: "/lookresult", element: < LookResult/> },
-  { path: "/adminaccount", element: < AdminAccount/> }
+  { path: "/adminaccount", element: < AdminAccount/> },
+  { path: "/account", element: < Account/> },
+  { path: "/edit", element: < Edit/> }
+
 
   
 ]);
