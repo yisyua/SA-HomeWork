@@ -18,12 +18,12 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     sequelize,
     tableName: 'SystemFeedback',
+    schema: 'dbo',
     timestamps: false,
     indexes: [
       {
-        name: "PRIMARY",
+        name: "PK__SystemFe__3213E83F9715B461",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "id" },
         ]

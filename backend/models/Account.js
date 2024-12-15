@@ -14,33 +14,46 @@ module.exports = function(sequelize, DataTypes) {
     username: {
       type: DataTypes.STRING(50),
       allowNull: false,
-      unique: "username"
+      unique: "UQ__Account__F3DBC57243861BA3"
     },
     password: {
       type: DataTypes.STRING(100),
       allowNull: false
     },
     role: {
-      type: DataTypes.ENUM('teacher','student'),
+      type: DataTypes.STRING(10),
       allowNull: false
     }
   }, {
     sequelize,
     tableName: 'Account',
+    schema: 'dbo',
     timestamps: false,
     indexes: [
       {
-        name: "PRIMARY",
+        name: "PK__Account__3213E83FB99111D7",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "id" },
         ]
       },
       {
+        name: "PRIMARY",
+        unique: true,
+        fields: [
+          { name: "id" },
+        ]
+      },
+      {
+        name: "UQ__Account__F3DBC57243861BA3",
+        unique: true,
+        fields: [
+          { name: "username" },
+        ]
+      },
+      {
         name: "username",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "username" },
         ]

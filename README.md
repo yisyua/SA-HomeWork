@@ -3,7 +3,7 @@
 * inspectdb DB  
 
   ```bash
-  npx sequelize-auto -h localhost -d my_database -u my_user -p 3306 -x my_password -e mariadb -o ./models
+  npx sequelize-auto -h localhost -d SA-Homework -u sa -p 1433 -x My_P@ssw0rd! -e mssql -o ./models
   ```
 
 * docker run

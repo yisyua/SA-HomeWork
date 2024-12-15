@@ -16,7 +16,7 @@ GET http://localhost:3000/api/accounts
 GET http://localhost:3000/api/accounts/2
 
 ### 更新帳號 (PUT)
-PUT http://localhost:3000/api/accounts/1
+PUT http://localhost:3000/api/accounts/2
 Content-Type: application/json
 
 {

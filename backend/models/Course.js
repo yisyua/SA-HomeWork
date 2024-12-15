@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true
     },
     semester: {
-      type: DataTypes.STRING(10),
+      type: DataTypes.STRING(20),
       allowNull: false
     },
     education_system: {
@@ -34,7 +34,7 @@ module.exports = function(sequelize, DataTypes) {
     course_code: {
       type: DataTypes.STRING(20),
       allowNull: false,
-      unique: "course_code"
+      unique: "UQ__Course__AB6B45F18B6A21CB"
     },
     instructor_id: {
       type: DataTypes.INTEGER,
@@ -51,20 +51,19 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     sequelize,
     tableName: 'Course',
+    schema: 'dbo',
     timestamps: false,
     indexes: [
       {
-        name: "PRIMARY",
+        name: "PK__Course__3213E83FEBBEFF30",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "id" },
         ]
       },
       {
-        name: "course_code",
+        name: "UQ__Course__AB6B45F18B6A21CB",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "course_code" },
         ]

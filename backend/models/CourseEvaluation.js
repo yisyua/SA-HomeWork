@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     semester: {
-      type: DataTypes.STRING(10),
+      type: DataTypes.STRING(20),
       allowNull: true
     },
     evaluation_content: {
@@ -42,21 +42,14 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     sequelize,
     tableName: 'CourseEvaluation',
+    schema: 'dbo',
     timestamps: false,
     indexes: [
       {
-        name: "PRIMARY",
+        name: "PK__CourseEv__3213E83FE79AFE2E",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "id" },
-        ]
-      },
-      {
-        name: "course_id",
-        using: "BTREE",
-        fields: [
-          { name: "course_id" },
         ]
       },
     ]
