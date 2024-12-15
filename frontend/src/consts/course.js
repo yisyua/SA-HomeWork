@@ -1,17 +1,18 @@
 export const courseResult = [
     { 
         semester: "1122",
-        program: "四技",
+        program: "學士後多元專長",
         department: "資訊管理系",
         grade: "2",
         course_id: "0133", 
-        course_name: "資料庫管理系統", 
+        course_name: "產業經營績效之大數據分析", 
         course_teacher: "連中岳",
         num: "3", 
         list: "專業必修",
-        classroom: "B210",
-        day: "5",
-        time: "2~4"
+        classroom_key: "B",
+        classroom: "210",
+        day: "星期5",
+        time: "2,3,4"
     },
     { 
         semester: "1122",
@@ -23,9 +24,10 @@ export const courseResult = [
         course_teacher: "杜清敏",
         num: "3", 
         list: "專業選修",
-        classroom: "F402",
-        day: "4",
-        time: "6~8"
+        classroom_key: "F",
+        classroom: "402",
+        day: "星期4",
+        time: "6,7,8"
     },
     { 
         semester: "1122",
@@ -37,9 +39,10 @@ export const courseResult = [
         course_teacher: "陳亮均",
         num: "2", 
         list: "專業選修",
-        classroom: "G201",
-        day: "3",
-        time: "6~7"
+        classroom_key: "G",
+        classroom: "201",
+        day: "星期3",
+        time: "6,7"
     },
     { 
         semester: "1122",
@@ -51,9 +54,10 @@ export const courseResult = [
         course_teacher: "蔡坤孝",
         num: "3", 
         list: "專業選修",
-        classroom: "F602",
-        day: "1",
-        time: "5~7"
+        classroom_key: "F",
+        classroom: "602",
+        day: "星期1",
+        time: "5,6,7"
     },
     { 
         semester: "1122",
@@ -65,9 +69,10 @@ export const courseResult = [
         course_teacher: "杜清敏",
         num: "3", 
         list: "專業選修",
-        classroom: "F602",
-        day: "2",
-        time: "2~4"
+        classroom_key: "F",
+        classroom: "602",
+        day: "星期2",
+        time: "2,3,4"
     },
     { 
         semester: "1122",
@@ -79,9 +84,10 @@ export const courseResult = [
         course_teacher: "洪論評",
         num: "3", 
         list: "專業選修",
-        classroom: "F602",
-        day: "1",
-        time: "2~4"
+        classroom_key: "F",
+        classroom: "602",
+        day: "星期1",
+        time: "2,3,4"
     },
     { 
         semester: "1122",
@@ -93,9 +99,10 @@ export const courseResult = [
         course_teacher: "陳彥宏",
         num: "3", 
         list: "專業選修",
-        classroom: "F602",
-        day: "3",
-        time: "2~4"
+        classroom_key: "F",
+        classroom: "602",
+        day: "星期3",
+        time: "2,3,4"
     },
     { 
         semester: "1122",
@@ -107,9 +114,10 @@ export const courseResult = [
         course_teacher: "吳承翰",
         num: "3", 
         list: "專業必修",
-        classroom: "B210",
-        day: "2",
-        time: "8~10"
+        classroom_key: "B",
+        classroom: "210",
+        day: "星期2",
+        time: "8,9,10"
     },
   ];
   

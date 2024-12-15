@@ -11,61 +11,61 @@ create table Teacher(
 	gmail varchar(50),
 	http char(200),
 )
---¦Ñ®v¸ê°T
+--è€å¸«è³‡è¨Š
 Insert  into Teacher(name,gmail,http)
 values
-	  ('§ù²M±Ó','chingmiin@ntunhs.edu.tw','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
-	  ('½²©[§µ','derek2023@mail.ntunhs.org','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
-	  ('³¯«G§¡','liangchun@ntunhs.edu.tw','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
-	  ('½²ºûªe','tsaiweiher@gmail.com','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
-	  ('ªL¼C¬î','swordlin58@gmail.com','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
-      ('³s¤¤©¨','chungyueh@ntunhs.edu.tw','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
-	  ('·¨©¨','jamesyang0811@gmail.com','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
-	  ('±ç¬L¥É','chaoyu1010@gmail.com','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
-	  ('Ä¬³Õ¥È','pohsuan@ntunhs.edu.tw','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw');
+	  ('æœæ¸…æ•','chingmiin@ntunhs.edu.tw','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
+	  ('è”¡å¤å­','derek2023@mail.ntunhs.org','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
+	  ('é™³äº®å‡','liangchun@ntunhs.edu.tw','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
+	  ('è”¡ç¶­æ²³','tsaiweiher@gmail.com','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
+	  ('æ—åŠç§‹','swordlin58@gmail.com','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
+      ('é€£ä¸­å²³','chungyueh@ntunhs.edu.tw','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
+	  ('æ¥Šå²³','jamesyang0811@gmail.com','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
+	  ('æ¢æ˜­ç‰','chaoyu1010@gmail.com','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw'),
+	  ('è˜‡åšç„','pohsuan@ntunhs.edu.tw','https://im.ntunhs.edu.tw/p/412-1054-147.php?Lang=zh-tw');
 
 --------------------------------------------------------------------------------------------------------------
---½Òµ{¬d¸ßµ²ªG
-CREATE TABLE ½Òµ{¬d¸ßµ²ªG (
-   °lÂÜ char(1),
-   ½s¸¹ char(5),
-   ¾Ç´Á char(5),
-   ¨t©Ò char(15),
-   ¦~¯Å char(2),
-   ¯Z²Õ char(3),
-   ¬ì¥Ø¥N¸¹ char(4),
-   ½Òµ{¦WºÙ char(20),
-   ±Ğ®v©m¦W char(10),
-   ¤W½Ò¤H¼Æ int,
-   ¾Ç¤À¼Æ int,
-   ½Ò§O char(10),
-   ¦aÂI char(6),
-   ¬P´Á char(5),
-   ¸`¦¸ char(6),
-   ¬d¬İ½Òµ{µû»ù char(6),
+--èª²ç¨‹æŸ¥è©¢çµæœ
+CREATE TABLE èª²ç¨‹æŸ¥è©¢çµæœ (
+   è¿½è¹¤ char(1),
+   ç·¨è™Ÿ char(5),
+   å­¸æœŸ char(5),
+   ç³»æ‰€ char(15),
+   å¹´ç´š char(2),
+   ç­çµ„ char(3),
+   ç§‘ç›®ä»£è™Ÿ char(4),
+   èª²ç¨‹åç¨± char(20),
+   æ•™å¸«å§“å char(10),
+   ä¸Šèª²äººæ•¸ int,
+   å­¸åˆ†æ•¸ int,
+   èª²åˆ¥ char(10),
+   åœ°é» char(6),
+   æ˜ŸæœŸ char(5),
+   ç¯€æ¬¡ char(6),
+   æŸ¥çœ‹èª²ç¨‹è©•åƒ¹ char(6),
    
 )
 ----------------------------------------------------------------------------------------------------------------
---¨t²Î¦^³ø
-CREATE TABLE ¨t²Î¦^³ø (
-   ¤é´Á datetime,
-   °İÃD´y­z char(100),
+--ç³»çµ±å›å ±
+CREATE TABLE ç³»çµ±å›å ± (
+   æ—¥æœŸ datetime,
+   å•é¡Œæè¿° char(100),
 )
 ----------------------------------------------------------------------------------------------------------------
---½Òµ{µû»ù
-CREATE TABLE ½Òµ{µû»ù (
-   ­×½Ò¾Ç´Á char(6),
-   ½Òµ{¦WºÙ char(20),
-   ¤W½Ò¤è¦¡¤º®e³W©w char(100),
-   ¦Ò¸Õµû¤À¤è¦¡ char(50),
-   ³ø§i¦Ò¸Õ char(50),
-   ¨ä¥L¸É¥R char(50),
-   ¶ñ¼g®É¶¡ datetime,
-   ¶ñ¼gªÌ char(10),
+--èª²ç¨‹è©•åƒ¹
+CREATE TABLE èª²ç¨‹è©•åƒ¹ (
+   ä¿®èª²å­¸æœŸ char(6),
+   èª²ç¨‹åç¨± char(20),
+   ä¸Šèª²æ–¹å¼å…§å®¹è¦å®š char(100),
+   è€ƒè©¦è©•åˆ†æ–¹å¼ char(50),
+   å ±å‘Šè€ƒè©¦ char(50),
+   å…¶ä»–è£œå…… char(50),
+   å¡«å¯«æ™‚é–“ datetime,
+   å¡«å¯«è€… char(10),
    
 )
 ------------------------------------------------------------------------------------------------------
---¾Ç¥Í±b¸¹ºŞ²z
+--å­¸ç”Ÿå¸³è™Ÿç®¡ç†
 Create table account
 (
 	Class Char(10),
@@ -75,14 +75,14 @@ Create table account
 )
 
 Insert into account(Class,Name,Account,Password)
-Values('22143A','¤ı¤p©ú',' 8566','dddd'),
-  ('22143A','³¯¤pªá',' 3596','aaaa'),
-     ('22143A','³¥Ã~¥ı½ú',' 114514','bbbb'),
-  ('22143A','±i¤j±j','5233','cccc');
+Values('22143A','ç‹å°æ˜',' 8566','dddd'),
+  ('22143A','é™³å°èŠ±',' 3596','aaaa'),
+     ('22143A','é‡ç¸å…ˆè¼©',' 114514','bbbb'),
+  ('22143A','å¼µå¤§å¼·','5233','cccc');
 
 select* from Teacher
-select* from ½Òµ{¬d¸ßµ²ªG
-select* from ¨t²Î¦^³ø
-select* from ½Òµ{µû»ù
+select* from èª²ç¨‹æŸ¥è©¢çµæœ
+select* from ç³»çµ±å›å ±
+select* from èª²ç¨‹è©•åƒ¹
 select* from account
 
