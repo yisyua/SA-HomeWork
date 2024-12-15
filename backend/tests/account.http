@@ -1,0 +1,30 @@
+### 建立帳號 (POST)
+POST http://localhost:3000/api/accounts
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "username": "johndoe",
+  "password": "123456",
+  "role": "teacher"
+}
+
+### 查詢全部帳號 (GET)
+GET http://localhost:3000/api/accounts
+
+### 查詢特定帳號 (GET)
+GET http://localhost:3000/api/accounts/2
+
+### 更新帳號 (PUT)
+PUT http://localhost:3000/api/accounts/1
+Content-Type: application/json
+
+{
+  "name": "John Updated",
+  "username": "johnupdated",
+  "password": "newpassword",
+  "role": "student"
+}
+
+### 刪除帳號 (DELETE)
+DELETE http://localhost:3000/api/accounts/1
